@@ -1,0 +1,5 @@
+#%PAM-1.0
+auth       required     pam_google_authenticator.so      forward_pass
+auth       sufficient   pam_lsass.so     try_first_pass
+account    include      password-auth
+session    include      password-auth
